@@ -1,0 +1,118 @@
+[
+  {
+    "description": "  As a job seeker\n  I want to search for jobs and filter by location\n  So that I can find relevant job opportunities",
+    "elements": [
+      {
+        "description": "",
+        "id": "just-eat-takeaway-career-search;tc001---search-for-test-jobs-and-filter-by-netherlands",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "TC001 - Search for Test jobs and filter by Netherlands",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2108201399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the Just Eat Takeaway careers page",
+            "match": {
+              "location": "src\\step-definitions\\career_search.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6980013699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I search for job title \"Test\"",
+            "match": {
+              "location": "src\\step-definitions\\career_search.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4463577499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see search results from multiple locations",
+            "match": {
+              "location": "src\\step-definitions\\career_search.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1989263999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I open the country filter",
+            "match": {
+              "location": "src\\step-definitions\\career_search.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1447628099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I select \"Netherlands\" from the country filter",
+            "match": {
+              "location": "src\\step-definitions\\career_search.steps.ts:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2196705700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see that the results are filtered to show only Netherlands locations",
+            "match": {
+              "location": "src\\step-definitions\\career_search.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1046233299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 681932400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "just-eat-takeaway-career-search",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Just Eat Takeaway Career Search",
+    "tags": [],
+    "uri": "src\\features\\career_search.feature"
+  }
+]

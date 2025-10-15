@@ -1,0 +1,24 @@
+{
+  "name": "just-eat-takeaway-qa-automation",
+  "version": "1.0.0",
+  "description": "QA Engineer Challenge - Just Eat Takeaway Career Section Automation with TypeScript, Playwright, and Cucumber",
+  "scripts": {
+    "test": "cucumber-js --require-module ts-node/register --require 'src/**/*.ts' && npm run report",
+    "test:headed": "cucumber-js --require-module ts-node/register --require \"src/**/*.ts\" --world-parameters \"{\\\"headless\\\":false}\" && npm run report",
+    "test:debug": "cucumber-js --require-module ts-node/register --require \"src/**/*.ts\" --world-parameters \"{\\\"headless\\\":false,\\\"debug\\\":true}\" && npm run report",
+    "test:chrome": "cucumber-js --require-module ts-node/register --require \"src/**/*.ts\" --world-parameters \"{\\\"browser\\\":\\\"chromium\\\"}\" && npm run report",
+    "tc001:headed": "cucumber-js --require-module ts-node/register --require \"src/**/*.ts\" --world-parameters \"{\\\"headless\\\":false}\" --name \"TC001\" && npm run report && npm run report:enhanced",
+    "report": "node scripts/generate-report.js",
+    "report:enhanced": "node scripts/generate-enhanced-report.js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.0",
+    "@types/node": "^20.10.0",
+    "cucumber-html-reporter": "^7.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}
