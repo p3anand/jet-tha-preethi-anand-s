@@ -14,85 +14,85 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2108201399
+              "duration": 2010391799
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
+            "line": 8,
             "name": "I navigate to the Just Eat Takeaway careers page",
             "match": {
-              "location": "src\\step-definitions\\career_search.steps.ts:9"
+              "location": "src\\step-definitions\\career_search.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 6980013699
+              "duration": 4601878498
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 8,
+            "line": 11,
             "name": "I search for job title \"Test\"",
             "match": {
-              "location": "src\\step-definitions\\career_search.steps.ts:15"
+              "location": "src\\step-definitions\\career_search.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 4463577499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 9,
-            "name": "I should see search results from multiple locations",
-            "match": {
-              "location": "src\\step-definitions\\career_search.steps.ts:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1989263999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "I open the country filter",
-            "match": {
-              "location": "src\\step-definitions\\career_search.steps.ts:24"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1447628099
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "I select \"Netherlands\" from the country filter",
-            "match": {
-              "location": "src\\step-definitions\\career_search.steps.ts:28"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2196705700
+              "duration": 4514820599
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 12,
-            "name": "I should see that the results are filtered to show only Netherlands locations",
+            "name": "I should see search results from multiple locations",
             "match": {
-              "location": "src\\step-definitions\\career_search.steps.ts:32"
+              "location": "src\\step-definitions\\career_search.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 1046233299
+              "duration": 2184015499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I open the country filter",
+            "match": {
+              "location": "src\\step-definitions\\career_search.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1307052598
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I select \"Netherlands\" from the country filter",
+            "match": {
+              "location": "src\\step-definitions\\career_search.steps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2532339299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see that the results are filtered to show only Netherlands locations",
+            "match": {
+              "location": "src\\step-definitions\\career_search.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1192688499
             }
           },
           {
@@ -100,7 +100,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 681932400
+              "duration": 1204731599
             }
           }
         ],
@@ -114,5 +114,152 @@
     "name": "Just Eat Takeaway Career Search",
     "tags": [],
     "uri": "src\\features\\career_search.feature"
+  },
+  {
+    "description": "  As a job seeker\n  I want to filter Sales jobs by category and country\n  So that I can find relevant job opportunities",
+    "elements": [
+      {
+        "description": "",
+        "id": "sales-job-filtering-with-dropdown-selection;tc002---filter-sales-jobs-and-select-germany",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "TC002 - Filter Sales jobs and select Germany",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2115210900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I navigate to the Just Eat Takeaway careers page for Sales filtering",
+            "match": {
+              "location": "src\\step-definitions\\sales_job_filtering.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4702132900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on the job search input field to open dropdown",
+            "match": {
+              "location": "src\\step-definitions\\sales_job_filtering.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2601807600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I select \"Sales\" from the dropdown menu",
+            "match": {
+              "location": "src\\step-definitions\\sales_job_filtering.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5282540299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should be on the Sales jobs page",
+            "match": {
+              "location": "src\\step-definitions\\sales_job_filtering.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1548918799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I should verify that \"Sales\" category is selected",
+            "match": {
+              "location": "src\\step-definitions\\sales_job_filtering.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2014939698
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I should verify that the job count matches the category count",
+            "match": {
+              "location": "src\\step-definitions\\sales_job_filtering.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1489827000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I select \"Germany\" from the country filter on Sales page",
+            "match": {
+              "location": "src\\step-definitions\\sales_job_filtering.steps.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2584621998
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I should verify that the filtered job count matches the \"Germany\" count",
+            "match": {
+              "location": "src\\step-definitions\\sales_job_filtering.steps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1486312200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 731821599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TC002",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "sales-job-filtering-with-dropdown-selection",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Sales Job Filtering with Dropdown Selection",
+    "tags": [],
+    "uri": "src\\features\\sales_job_filtering.feature"
   }
 ]

@@ -8,6 +8,7 @@
     "test:debug": "cucumber-js --require-module ts-node/register --require \"src/**/*.ts\" --world-parameters \"{\\\"headless\\\":false,\\\"debug\\\":true}\" && npm run report",
     "test:chrome": "cucumber-js --require-module ts-node/register --require \"src/**/*.ts\" --world-parameters \"{\\\"browser\\\":\\\"chromium\\\"}\" && npm run report",
     "tc001:headed": "cucumber-js --require-module ts-node/register --require \"src/**/*.ts\" --world-parameters \"{\\\"headless\\\":false}\" --name \"TC001\" && npm run report && npm run report:enhanced",
+    "tc002:headed": "cucumber-js --require-module ts-node/register --require \"src/**/*.ts\" --world-parameters \"{\\\"headless\\\":false}\" --tags \"@TC002\" && npm run report && npm run report:enhanced",
     "report": "node scripts/generate-report.js",
     "report:enhanced": "node scripts/generate-enhanced-report.js"
   },

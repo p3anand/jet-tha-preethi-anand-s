@@ -10,8 +10,8 @@ Before(async function (this: CustomWorld) {
   console.log('🚀 Starting test execution...');
   stepCounter = 0; // Reset step counter for each test
   
-  // Clear old screenshots for TC001 before starting new test
-  const testCaseDir = path.join(__dirname, '../../screenshots/TC001');
+  // Clear old screenshots for current test case before starting new test
+  const testCaseDir = path.join(__dirname, '../../screenshots/TC002');
   if (fs.existsSync(testCaseDir)) {
     const files = fs.readdirSync(testCaseDir);
     files.forEach(file => {
@@ -20,7 +20,7 @@ Before(async function (this: CustomWorld) {
       }
     });
   } else {
-    // Create TC001 directory if it doesn't exist
+    // Create TC002 directory if it doesn't exist
     fs.mkdirSync(testCaseDir, { recursive: true });
   }
   
@@ -34,7 +34,7 @@ AfterStep(async function (this: CustomWorld, step) {
   // Skip screenshot for step 2 as it's taken manually in the Page Object Model
   if (stepCounter !== 2) {
     // Take screenshot after each step with test case prefix
-    await this.takeScreenshot(`TC001/TC001_step_${stepCounter.toString().padStart(2, '0')}`);
+    await this.takeScreenshot(`TC002/TC002_step_${stepCounter.toString().padStart(2, '0')}`);
   }
 });
 
@@ -44,7 +44,7 @@ After(async function (this: CustomWorld, scenario) {
   // Take screenshot only for failed tests
   if (scenario.result?.status === Status.FAILED) {
     console.log(`❌ Test failed: ${scenarioName}`);
-    await this.takeScreenshot(`TC001/TC001_failed`);
+    await this.takeScreenshot(`TC002/TC002_failed`);
   } else if (scenario.result?.status === Status.PASSED) {
     console.log(`✅ Test passed: ${scenarioName}`);
     // No screenshot for passed tests - step screenshots are sufficient

@@ -1,5 +1,9 @@
 import { Page, expect } from '@playwright/test';
 
+/**
+ * Page Object Model for general careers page functionality on Just Eat Takeaway careers site
+ * Handles job search, filtering, and verification for TC001 test case
+ */
 export class CareersPage {
   private page: Page;
 
@@ -44,10 +48,37 @@ export class CareersPage {
     await this.page.waitForSelector('input[type="checkbox"][aria-label*="Netherlands"]');
   }
 
-  async selectCountryFilter(countryName: string): Promise<void> {
+  // TC001 Country Filter (for search results page)
+  async selectCountryFilterTC001(countryName: string): Promise<void> {
     // Use a dynamic selector that finds checkbox by country name without hardcoding job count
     const countryCheckbox = this.page.locator(`input[type="checkbox"][aria-label*="${countryName}"]`);
     await countryCheckbox.click();
+    await this.page.waitForTimeout(1000);
+  }
+
+  // TC002 Country Filter (for Sales jobs page)
+  async selectCountryFilterTC002(countryName: string): Promise<void> {
+    // Wait for country filter to be available and click on the country filter checkbox
+    // Use multiple selector strategies for robustness
+    try {
+      // First try the specific data attributes
+      const countryCheckbox = this.page.locator(`input[data-ph-at-text="${countryName}"][data-ph-at-facetkey="facet-country"]`);
+      await countryCheckbox.waitFor({ timeout: 10000 });
+      await countryCheckbox.click();
+    } catch (error) {
+      // If that doesn't work, try alternative selectors
+      try {
+        // Try with aria-label containing the country name
+        const countryCheckbox = this.page.locator(`input[aria-label*="${countryName}"]`);
+        await countryCheckbox.waitFor({ timeout: 5000 });
+        await countryCheckbox.click();
+      } catch (error2) {
+        // Try clicking on the label or any element containing the country name
+        await this.page.click(`text=${countryName}`);
+      }
+    }
+    
+    // Wait for filter to be applied
     await this.page.waitForTimeout(1000);
   }
 
@@ -117,5 +148,6 @@ export class CareersPage {
     const newCount = await jobItems.count();
     expect(newCount).not.toBe(initialCount);
   }
+
 
 }
