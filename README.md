@@ -238,4 +238,5 @@ Each screenshot is named with the step number for easy identification.
 - **Screenshots**: Full page captures
 - **Reports**: HTML with embedded images
 
+---
 
